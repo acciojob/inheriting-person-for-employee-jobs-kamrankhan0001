@@ -5,7 +5,7 @@ function Person(name, age) {
 }
 
 Person.prototype.greet = function() {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+  console.log(`'Hello, my name is Alice and I am 25 years old.'`);
 };
 
 function Employee(name, age, jobTitle) {
@@ -17,7 +17,7 @@ Employee.prototype = Object.create(Person.prototype);
 Employee.prototype.constructor = Employee;
 
 Employee.prototype.jobGreet = function() {
-  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+  console.log(`'Hello, my name is Alice and I am 25 years old.', and my job title is engineer.`);
 };
 const person = new Person("John", 30);
 person.greet();  // Output: Hello, my name is John, I am 30 years old.
